@@ -1,0 +1,553 @@
+* {
+ padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@import 'abstracts';
+@import 'node_modules/include-media/dist/include-media';
+
+body {
+  font-family: sans-serif, 'Roboto', 'Roboto Mono';
+}
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 57px;
+  opacity: 98%;
+  background: rgb(35, 35, 35);
+  display: flex;
+  align-items: center;
+
+  .burger-container {
+    position: absolute;
+    margin-left: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+
+    .burger-btn {
+      @include burger-btn(18px, 2px, #fff, 5px);
+    }
+  }
+  
+  img {
+    height: 40px;
+    margin-left: 57px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .search-container {
+    display: flex;
+    position: relative;
+
+    input {
+      margin-left: 115px;
+      font-family: inherit;
+      font-size: 1rem;
+      width: 575px;
+      padding-left: 13px;
+      outline: none;
+      border: 1px solid rgb(60, 60, 60);
+      border-bottom-left-radius: 2px;
+      border-top-left-radius: 2px;
+      background: rgb(24, 24, 24);
+      color: white;
+
+      @include media('<=tablet') {
+        width: 250px;
+        margin-left: 20px;
+      }
+    }
+
+    .search-btn {
+      cursor: pointer;
+      width: 64px;
+      height: 33px;
+      background: rgb(55, 55, 55);
+      border-bottom-right-radius: 2px;
+      border-top-right-radius: 2px;
+    }
+
+    .fa-search {
+      pointer-events: none;
+      position: absolute;
+      top: 8px;
+      right: 27px;
+      color: rgb(115, 115, 115);
+      font-size: 1rem;
+    }
+  }
+
+  .fa-microphone {
+    cursor: pointer;
+    margin-left: 20px;
+    color: white;
+    font-size: 1.2rem;
+  }
+
+  .additional-icons {
+    margin-left: 67px;
+
+    i {
+      cursor: pointer;
+      color: white;
+      font-size: 1.2rem;
+      padding-left: 1.4rem;
+    }
+    
+    @include media('<=tablet') {
+      margin-left: 10px;
+
+      i {
+        padding-left: 1rem;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .user-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 14px;
+    right: 43px;
+    border-radius: 50%;
+    background-image: url('images/kaisa.png');
+    background-position: center;
+    background-size: cover;
+    height: 2rem;
+    width: 2rem;
+  }
+}
+
+main {
+  display: flex;
+  background: rgb(25, 25, 25);
+  padding-top: 55px;
+  padding-bottom: 75px;
+
+  @include media('<=tablet') {
+    flex-direction: column;
+  }
+
+  section {
+    width: 60vw;
+    margin-left: 32px;
+    padding-top: 12px;
+    padding-bottom: 15px;
+
+    @include media('<=tablet') {
+      margin-left: 5px;
+    }
+
+    .video-player {
+      iframe {
+        border: none;
+        width: 710px;
+        height: 399.38px;
+
+        @include media('<=tablet') {
+          width: 624px;
+          height: 351px;
+        }
+
+        @include media('>=1920px') {
+          width: 844px;
+          height: 477px;
+        }
+      }
+    }
+
+    .title-and-buttons {
+      position: relative;
+      margin-left: 32px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid $line-color;
+      width: 710px;
+
+      .video-title {
+        padding-bottom: 8px;
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: white;
+      }
+
+      .views-and-date {
+        font-size: .9rem;
+        font-weight: 500;
+        color: $text170;
+      }
+
+      .like-dislike-buttons {
+        position: absolute;
+        display: flex;
+        top: 47px;
+        right: 10px;
+        color: $text170;
+
+        div {
+          display: flex;
+          cursor: pointer;
+        }
+
+        i {
+          font-size: 1.3rem;
+          margin-left: 20px;
+        }
+
+        p {
+          font-size: .9rem;
+          font-weight: 600;
+          margin-left: 7px;
+        }
+
+        .save-burger {
+          margin-top: 5px;
+          margin-left: 20px;
+          @include burger-btn(13px, 2px, $text170, 4px);
+        }
+
+        .fa-ellipsis-h { cursor: pointer; }
+      }
+    }
+
+    .description {
+      color: white;
+      max-width: 710px;
+      border-bottom: 1px solid $line-color;
+
+      .channel-info {
+        position: relative;
+        display: flex;
+        margin-left: 0;
+        width: 710px;
+
+        .channel-logo {
+          border-radius: 50%;
+          height: 45px;
+          width: 45px;
+          background-image: url("images/fireship-logo.jpg");
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+
+        .info-container {
+          position: relative;
+          margin-top: 10px;
+          margin-left: 15px;
+
+          a {
+            font-size: .87rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+          }
+
+          .fa-check-circle {
+            position: absolute;
+            top: 3px;
+            left: 60px;
+            color: $text170;
+            font-size: .8rem;
+          }
+
+          .subscribers {
+            font-size: .77rem;
+            color: $text170;
+          }
+        }
+
+        .sub-button {
+          position: absolute;
+          top: 17px;
+          right: 10px;
+          padding: 10px 12px;
+          border: none;
+          background: red;
+          color: white;
+          border-radius: 2px;
+          font-family: inherit;
+          font-weight: 600;
+          font-size: .87rem;
+        }
+      }
+
+      .description-text {
+        margin-left: 60px;
+        width: 610px;
+        font-size: .87rem;
+
+        a {
+          text-decoration: none;
+          color: $link-color;
+        }
+      }
+
+      .show-more {
+        margin-top: 20px;
+        margin-left: 60px;
+        cursor: pointer;
+        color: $text170;
+        font-size: .77rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .comments {
+    color: $text170;
+
+    .comment-info {
+      margin-left: 1px;
+      display: flex;
+
+      h1 {
+        font-weight: 500;
+        color: white;
+      }
+
+      .fa-stream {
+        margin-left: 30px;
+        font-size: 1rem;
+      }
+
+      p {
+        margin-left: 10px;
+        font-weight: 600;
+        font-size: .9rem;
+      }
+    }
+
+    .push-comment {
+      position: relative;
+      display: flex;
+      margin-left: 0;
+
+      .profile-pic {
+        height: 42px;
+        width: 42px;
+        border-radius: 50%;
+        background-image: url('images/kaisa.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      input {
+        margin-top: 3px;
+        margin-left: 15px;
+        padding-bottom: 2px;
+        width: 655px;
+        height: 26px;
+        background: inherit;
+        border: none;
+        border-bottom: 1px solid $line-color;
+        outline: none;
+        font-size: .9rem;
+        color: white;
+
+        &::placeholder {
+          color: $text170;
+        }
+      }
+    }
+
+    .comment-list {
+      margin-top: 30px;
+      margin-left: 0;
+
+      .comment {
+        display: flex;
+        margin-top: 30px;
+
+        .img-container {
+          width: 40px;
+          height: 100%;
+          @include user-img-mapping();
+
+          .user-img {
+            min-width: 35px;
+            min-height: 35px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+        }
+
+        .other-content {
+          margin-left: 17px;
+
+          .pinned-by {
+            display: flex;
+            font-size: .55rem;
+
+            i {
+              color: white;
+              margin-top: 3px;
+            }
+
+            h2 {
+              margin-left: 5px;
+              font-weight: 500;
+            }
+          }
+
+          #user-time {
+            display: flex;
+
+            .user {
+              margin-top: 13px;
+              font-size: .7rem;
+              font-weight: 500;
+              color: white;
+            }
+
+            a {
+              color: inherit;
+              text-decoration: none;
+            }
+
+            .pinned {
+              margin-top: 11px;
+              width: 77px;
+              padding: 3px 7px;
+              display: flex;
+              align-items: center;
+              background: $text170;
+              border-radius: 40px;
+              font-size: .65rem;
+
+              i {
+                margin-left: 5px;
+              }
+            }
+
+            .time {
+              margin-top: 14px;
+              margin-left: 10px;
+              font-size: .75rem;
+            }
+          }
+
+          .comment-content {
+            margin-top: 10px;
+            color: white;
+            font-size: .92rem;
+            margin-right: 110px;
+
+            a {
+              text-decoration: none;
+              color: $link-color;
+            }
+          }
+
+          .comment-controls {
+            display: flex;
+            margin-top: 16px;
+            margin-bottom: 18px;
+            font-size: .9rem;
+            font-weight: 600;
+
+            .fa-thumbs-up {
+              cursor: pointer;
+            }
+
+            .fa-thumbs-down {
+              margin-left: 20px;
+              cursor: pointer;
+            }
+
+            .likes {
+              margin-left: 10px;
+            }
+
+            .reply {
+              margin-left: 25px;
+              cursor: pointer;
+            }
+
+          }
+
+          .replies {
+            position: relative;
+            display: inline;
+            color: $link-color;
+            cursor: pointer;
+
+            .fa-caret-down {
+              position: absolute;
+            }
+
+
+            p {
+              margin-left: 25px;
+              width: 120px;
+              font-size: .9rem;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .video-suggestions {
+    padding-top: 25px;
+    margin-right: 0;
+
+    a {
+      text-decoration: none;
+    }
+
+    .suggestion {
+      margin-bottom: 9px;
+      display: flex;
+      width: 370px;
+
+      @include thumbnail-mapping();
+
+      .suggetion-text {
+        margin-left: 9px;
+        color: $text170;
+        font-size: .72rem;
+
+        h3 {
+          color: white;
+          font-size: .85rem;
+        }
+
+        .channel {
+          display: flex;
+          margin-top: 5px;
+
+          p {
+            font-size: .85rem;
+          }
+
+          i {
+            margin-top: 2.5px;
+            margin-left: 5px;
+          }
+        }
+
+        .views {
+          margin-top: 5px;
+        }
+      }
+
+    }
+
+  }
+}
+
+

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React in 100 seconds - YouTube</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:ital@1&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="yt-icon.png" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/6fb8d24e2d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <header>
+    <div class="burger-container">
+      <div class="burger-btn"></div>
+    </div>
+    <a href="https://www.youtube.com"><img src="images/youtube-logo.svg" title="YouTube Home" /></a>
+    <div class="search-container">
+      <input type="text" placeholder="Search">
+      <div class="search-btn"></div>
+      <i class="fas fa-search"></i>
+    </div>
+    <i class="fas fa-microphone" title="Search with your voice"></i>
+    <section class="additional-icons">
+      <i class="fas fa-video" title="Create"></i>
+      <i class="fas fa-th" title="YouTube apps"></i>
+      <i class="fas fa-bell" title="Notifications"></i>
+      <div class="user-btn"></div>
+    </section>
+  </header>
+
+  <main>
+    <section>
+
+      <section class="video-player">
+        <iframe src="https://www.youtube.com/embed/Tn6-PIqc4UM"></iframe>
+      </section>
+      <section class="title-and-buttons">
+        <h1 class="video-title">
+          React in 100 Seconds
+        </h1>
+        <h3 class="views-and-date">288,566 views • 8 Sept 2020</h3>
+        <div class="like-dislike-buttons">
+          <div title="I like this">
+            <i class="fas fa-thumbs-up"></i>
+            <p>17k</p>
+          </div>
+          <div title="I dislike this">
+            <i class="fas fa-thumbs-down"></i>
+            <p>118</p>
+          </div>
+          <div title="Share">
+            <i class="fas fa-share"></i>
+            <p>SHARE</p>
+          </div>
+          <div title="Save">
+            <div class="save-burger"></div>
+            <p>SAVE</p>
+          </div>
+          <i class="fas fa-ellipsis-h"></i>
+        </div>
+      </section>
+
+      <section class="description">
+        <section class="channel-info">
+          <a href="https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA">
+            <div class="channel-logo"></div>
+          </a>
+          <div class="info-container">
+            <a href="https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA">
+              <p class="channel-name">Fireship</p>
+            </a>
+            <i class="fas fa-check-circle"></i>
+            <p class="subscribers">565K subscribers</p>
+          </div>
+          <button class="sub-button">SUBSCRIBE</button>
+        </section>
+        <section class="description-text">
+          React is a little JavaScript library with a big influence over the webdev world.
+          Learn the basics of React in
+          100 Seconds <a href="https://fireship.io/tags/react/" target="_blank">https://fireship.io/tags/react/</a>
+        </section>
+        <p class="show-more">SHOW MORE</p>
+      </section>
+
+      <section class="comments">
+        <section class="comment-info">
+          <h1 class="ammount">407 Comments</h1>
+          <i class="fas fa-stream"></i>
+          <p class="sort">SORT BY</p>
+        </section>
+        <section class="push-comment">
+          <div class="profile-pic"></div>
+          <input type="text" placeholder="Add a public comment...">
+        </section>
+        <section class="comment-list">
+          <div class="comment">
+            <div class="img-container">
+              <a href="https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA">
+                <div class="user-img one"></div>
+              </a>
+            </div>
+            <div class="other-content">
+              <div class="pinned-by">
+                <i class="fas fa-thumbtack"></i>
+                <h2>Pinned by Fireship</h2>
+              </div>
+              <div id="user-time">
+                <div class="user pinned">
+                  <a href="https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA">
+                    <h3>Fireship</h3>
+                  </a>
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <p class="time">5 months ago</p>
+              </div>
+              <p class="comment-content">
+                Also checkout Vue.js in 100 Seconds <a href="https://youtu.be/nhBVL41-_Cw"
+                  target="_blank">https://youtu.be/nhBVL41-_Cw</a>
+                and stay tuned for a JS "framework" video tomorrow :)
+              </p>
+              <div class="comment-controls">
+                <i class="fas fa-thumbs-up" title="Like"></i>
+                <p class="likes">116</p>
+                <i class="fas fa-thumbs-down" title="Dislike"></i>
+                <p class="reply">REPLY</p>
+              </div>
+              <div class="replies">
+                <i class="fas fa-caret-down"></i>
+                <p>View 11 replies</p>
+              </div>
+            </div>
+          </div>
+          <div class="comment">
+            <div class="img-container">
+              <a href="https://www.youtube.com/channel/UCbWEbeklehv2ifnVoZXdt7Q">
+                <div class="user-img two"></div>
+              </a>
+            </div>
+            <div class="other-content">
+              <div id="user-time">
+                <div class="user">
+                  <a href="https://www.youtube.com/channel/UCbWEbeklehv2ifnVoZXdt7Q">
+                    <h3>Rahul Shah</h3>
+                  </a>
+                </div>
+                <p class="time">3 months ago</p>
+              </div>
+              <p class="comment-content">Interviewer: How long have you been working on React?
+                Me: 100 seconds</p>
+              <div class="comment-controls">
+                <i class="fas fa-thumbs-up" title="Like"></i>
+                <p class="likes">297</p>
+                <i class="fas fa-thumbs-down" title="Dislike"></i>
+                <p class="reply">REPLY</p>
+              </div>
+            </div>
+          </div>
+          <div class="comment">
+            <div class="img-container">
+              <a href="https://www.youtube.com/channel/UCmLMeI7_oXicSxVnGdXZSvA">
+                <div class="user-img three"></div>
+              </a>
+            </div>
+            <div class="other-content">
+              <div id="user-time">
+                <div class="user">
+                  <a href="https://www.youtube.com/channel/UCmLMeI7_oXicSxVnGdXZSvA">
+                    <h3>Martín Salamanco</h3>
+                  </a>
+                </div>
+                <p class="time">5 months ago</p>
+              </div>
+              <p class="comment-content">Next: The whole Linux source code in 0.006 seconds</p>
+              <div class="comment-controls">
+                <i class="fas fa-thumbs-up" title="Like"></i>
+                <p class="likes">634</p>
+                <i class="fas fa-thumbs-down" title="Dislike"></i>
+                <p class="reply">REPLY</p>
+              </div>
+              <div class="replies">
+                <i class="fas fa-caret-down"></i>
+                <p>View 10 repplies</p>
+              </div>
+            </div>
+          </div>
+          <div class="comment">
+            <div class="img-container">
+              <a href="https://www.youtube.com/channel/UCe0_KitHR8PXhhv9DmVjGZA">
+                <div class="user-img four"></div>
+              </a>
+            </div>
+            <div class="other-content">
+              <div id="user-time">
+                <div class="user">
+                  <a href="https://www.youtube.com/channel/UCe0_KitHR8PXhhv9DmVjGZA">
+                    <h3>mohammed alkhatim</h3>
+                  </a>
+                </div>
+                <p class="time">5 months ago</p>
+              </div>
+              <p class="comment-content">me: watches react in 100 seconds video
+                also me: adds react developer to cv</p>
+              <div class="comment-controls">
+                <i class="fas fa-thumbs-up" title="Like"></i>
+                <p class="likes">444</p>
+                <i class="fas fa-thumbs-down" title="Dislike"></i>
+                <p class="reply">REPLY</p>
+              </div>
+              <div class="replies">
+                <i class="fas fa-caret-down"></i>
+                <p>View 3 repplies</p>
+              </div>
+            </div>
+          </div>
+          <div class="comment">
+            <div class="img-container">
+              <a href="https://www.youtube.com/channel/UC16mmMXvbeHHw1jjRRd6YOA">
+                <div class="user-img five"></div>
+              </a>
+            </div>
+            <div class="other-content">
+              <div id="user-time">
+                <div class="user">
+                  <a href="https://www.youtube.com/channel/UC16mmMXvbeHHw1jjRRd6YOA">
+                    <h3>umang mishra</h3>
+                  </a>
+                </div>
+                <p class="time">5 months ago</p>
+              </div>
+              <p class="comment-content">Instructions unclear: accidentally learned Angular.</p>
+              <div class="comment-controls">
+                <i class="fas fa-thumbs-up" title="Like"></i>
+                <p class="likes">249</p>
+                <i class="fas fa-thumbs-down" title="Dislike"></i>
+                <p class="reply">REPLY</p>
+              </div>
+              <div class="replies">
+                <i class="fas fa-caret-down"></i>
+                <p>View 4 replies</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+    </section>
+
+    <aside>
+      <nav class="video-suggestions">
+        <a href="https://www.youtube.com/watch?v=TNhaISOUy6Q&t=357s">
+          <div class="suggestion">
+            <div class="preview-image1"></div>
+            <div class="suggetion-text">
+              <h3>10 React Hooks Explained // Plus Build your own from Scratch</h3>
+              <div class="channel">
+                <p>Fireship</p>
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <p class="views">134,956 views • 18 Jan 2021</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/watch?v=nhBVL41-_Cw">
+          <div class="suggestion">
+            <div class="preview-image2"></div>
+            <div class="suggetion-text">
+              <h3>Vue.js Explained in 100 Seconds</h3>
+              <div class="channel">
+                <p>Fireship</p>
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <p class="views">417,050 views • 3 Apr 2020</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/watch?v=oHtR5YSPLjo">
+          <div class="suggestion">
+            <div class="preview-image3"></div>
+            <div class="suggetion-text">
+              <h3>2021 Tech Trends & Predictions for Developers</h3>
+              <div class="channel">
+                <p>Fireship</p>
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <p class="views">178,157 views • 7 Dec 2020</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/watch?v=W2Z7fbCLSTw">
+          <div class="suggestion">
+            <div class="preview-image4"></div>
+            <div class="suggetion-text">
+              <h3>7 Database Paradigms</h3>
+              <div class="channel">
+                <p>Fireship</p>
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <p class="views">412,938 views • 3 Sept 2020</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/watch?v=Ata9cSC2WpM">
+          <div class="suggestion">
+            <div class="preview-image5"></div>
+            <div class="suggetion-text">
+              <h3>Angular in 100 Seconds</h3>
+              <div class="channel">
+                <p>Fireship</p>
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <p class="views">198,724 views • 9 Sept 2020</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/watch?v=zQyrwxMPm88">
+          <div class="suggestion">
+            <div class="preview-image6"></div>
+            <div class="suggetion-text">
+              <h3>I built a chat app in 7 minutes with React & Firebase</h3>
+              <div class="channel">
+                <p>Fireship</p>
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <p class="views">337,679 views • 23 Sept 2020</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/watch?v=20QiX8rmHnU&t=1015s">
+          <div class="suggestion">
+            <div class="preview-image7"></div>
+            <div class="suggetion-text">
+              <h3>I've been challenged to a CSS Battle rematch | Can I beat him again???</h3>
+              <div class="channel">
+                <p>Kevin Powell</p>
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <p class="views">21,802 views • 25 Feb 2021</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/watch?v=OFHAIpw2oZI">
+          <div class="suggestion">
+            <div class="preview-image8"></div>
+            <div class="suggetion-text">
+              <h3>React vs Vanilla Javascript | Learn React For Beginners Part 1</h3>
+              <div class="channel">
+                <p>Dev Ed</p>
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <p class="views">94,963 views • 31 Jul 2020</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/watch?v=Z5iWr6Srsj8">
+          <div class="suggestion">
+            <div class="preview-image9"></div>
+            <div class="suggetion-text">
+              <h3>React Typescript Tutorial</h3>
+              <div class="channel">
+                <p>Ben Awad</p>
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <p class="views">227,938 views • 5 Sept 2019</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/watch?v=PKwu15ldZ7k">
+          <div class="suggestion">
+            <div class="preview-image10"></div>
+            <div class="suggetion-text">
+              <h3>React Authentication Crash Course With Firebase And Routing</h3>
+              <div class="channel">
+                <p>Web Dev Simplified</p>
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <p class="views">103,414 views • 10 Oct 2020</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/watch?v=ENrzD9HAZK4&t=550s">
+          <div class="suggestion">
+            <div class="preview-image11"></div>
+            <div class="suggetion-text">
+              <h3>Node.js Ultimate Beginner’s Guide in 7 Easy Steps</h3>
+              <div class="channel">
+                <p>Fireship</p>
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <p class="views">316,006 views • 21 May 2020</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/watch?v=roywYSEPSvc&t=823s">
+          <div class="suggestion">
+            <div class="preview-image12"></div>
+            <div class="suggetion-text">
+              <h3>Learn Sass in this Free Crash Course - Give your CSS Superpowers!</h3>
+              <div class="channel">
+                <p>Designcourse</p>
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <p class="views">371,885 views • 1 Aug 2018</p>
+            </div>
+          </div>
+        </a>
+      </nav>
+    </aside>
+  </main>
+
+</body>
+
+</html>

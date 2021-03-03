@@ -1,0 +1,71 @@
+$text170: rgb(170, 170, 170);
+$line-color: rgb(60, 60, 60);
+$link-color: #0096c7;
+
+@mixin line($width, $height, $color) {
+  background: $color;
+  width: $width;
+  height: $height;
+}
+
+@mixin burger-btn($width, $height, $color ,$translate) {
+  @include line($width, $height, $color);
+  position: relative;
+
+  &::before {
+    @include line($width, $height, $color);
+    position: absolute;
+    content: '';
+    transform: translateY($translate);
+  }
+
+  &::after {
+    @include line($width, $height, $color);
+    position: absolute;
+    content: '';
+    transform: translateY(-#{$translate});
+  }
+}
+
+$thumbnail-images: (
+  1: "images/thumbnails/react-hooks.jpg",
+  2: "images/thumbnails/vue-100.jpg",
+  3: "images/thumbnails/2021-trends.jpg",
+  4: "images/thumbnails/7-database.jpg",
+  5: "images/thumbnails/angular-100.jpg",
+  6: "images/thumbnails/chat-app.jpg",
+  7: "images/thumbnails/css-rematch.jpg",
+  8: "images/thumbnails/react-begginers.jpg",
+  9: "images/thumbnails/react-ts.jpg",
+  10: "images/thumbnails/react-authentication.jpg",
+  11: "images/thumbnails/node-7.jpg",
+  12: "images/thumbnails/sass-course.jpg",
+);
+
+@mixin thumbnail-mapping() {
+  @each $number, $image in $thumbnail-images {
+    .preview-image#{$number} {
+      min-height: 94px;
+      min-width: 167.11px;
+      background-image: url($image);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+$user-images: (
+  "one": "images/fireship-logo.jpg",
+  "two": "images/r-letter.jpg",
+  "three": "images/m-letter.jpg",
+  "four": "images/m-letter.jpg",
+  "five": "images/u-letter.jpg",
+);
+
+@mixin user-img-mapping() {
+  @each $number, $image in $user-images {
+    .#{$number} {
+      background-image: url($image);
+    }
+  }
+}
